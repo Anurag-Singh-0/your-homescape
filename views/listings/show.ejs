@@ -1,0 +1,146 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="show-container">
+  <!-- CARD SECTION -->
+  <div class="show-card">
+    <h3><%= listing.title %></h3>
+    <div class="img-card">
+      <img src="<%= listing.image.url %>" />
+    </div>
+    <b><span>Own by <%= listing.owner.username %></span></b>
+    <p style="font-size: 1rem;"><%= listing.description %></p>
+    <p>&#8377;<%= listing.price.toLocaleString("en-IN") %> / night</p>
+    <span style="opacity: 0.9;"><%= listing.country %>,</span>
+    <span style="opacity: 0.9;"><%= listing.location %></span>
+
+    <% if (currentUser && currentUser._id.equals(listing.owner._id)) { %>
+    <div class="actionBtn">
+      <a href="/listings/<%= listing._id %>/edit" class="showBtn">Edit</a>
+
+      <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
+        <button class="showBtn" id="deleteBtn">Delete</button>
+      </form>
+    </div>
+    <% } %>
+  </div>
+
+  <!-- ----------------------------------
+      Create Review Section
+    ---------------------------------- -->
+  <div class="review-generator">
+    <% if (currentUser) { %>
+    <h4>Leave a review</h4>
+    <hr />
+    <form
+      method="POST"
+      action="/listings/<%= listing._id %>/reviews"
+      novalidate
+      class="needs-validation"
+    >
+      <div class="mb-2 mt-2">
+        <label for="rating" class="form-label">Rating</label>
+        <fieldset class="starability-coinFlip">
+          <input
+            type="radio"
+            id="no-rate"
+            class="input-no-rate"
+            name="review[rating]"
+            value="1"
+            checked
+            aria-label="No rating."
+          />
+          <!-- here we create review object And to which we are giving value, rating -->
+          <input
+            type="radio"
+            id="first-rate1"
+            name="review[rating]"
+            value="1"
+          />
+          <label for="first-rate1" title="Terrible">1 star</label>
+          <input
+            type="radio"
+            id="first-rate2"
+            name="review[rating]"
+            value="2"
+          />
+          <label for="first-rate2" title="Not good">2 stars</label>
+          <input
+            type="radio"
+            id="first-rate3"
+            name="review[rating]"
+            value="3"
+          />
+          <label for="first-rate3" title="Average">3 stars</label>
+          <input
+            type="radio"
+            id="first-rate4"
+            name="review[rating]"
+            value="4"
+          />
+          <label for="first-rate4" title="Very good">4 stars</label>
+          <input
+            type="radio"
+            id="first-rate5"
+            name="review[rating]"
+            value="5"
+          />
+          <label for="first-rate5" title="Amazing">5 stars</label>
+        </fieldset>
+      </div>
+
+      <div class="mb-3 mt-2">
+        <label for="comment" class="form-label">Comment</label>
+        <textarea
+          name="review[comment]"
+          id="comment"
+          cols="30"
+          rows="5"
+          class="form-control"
+          placeholder="Leave a review"
+          required
+        ></textarea>
+        <div class="invalid-feedback">Please add some comment for reviews!</div>
+      </div>
+      <button class="btn btn-outline-primary mb-2">Submit your review</button>
+    </form>
+    <% } %>
+  </div>
+
+  <hr />
+  <% if (listing.reviews.length > 0) { %>
+  <h4>All reviews</h4>
+  <div class="review-container">
+    <% for( review of listing.reviews) { %>
+    <div class="review-card">
+      <div class="card-heading">
+        <h6>@<%= review.author.username %></h6>
+        <p class="starability-result" data-rating="<%= review.rating %>"></p>
+      </div>
+
+      <div class="review-comment"><%= review.comment %></div>
+
+      <form
+        action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+        method="POST"
+      >
+        <button class="btn btn-sm btn-outline-danger">Delete</button>
+      </form>
+    </div>
+
+    <% } %>
+  </div>
+  <% } %>
+
+  <div class="map-container">
+    <h4>Where you'll be</h4>
+    <div id="map"></div>
+  </div>
+</div>
+
+<script>
+  const lati = "<%= listing.geometry.coordinates[1] %>";
+  const long = "<%= listing.geometry.coordinates[0] %>";
+  const title = "<%= listing.title %>";
+</script>
+
+<script src="/js/map.js"></script>

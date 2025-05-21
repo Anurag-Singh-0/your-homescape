@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #e93524;
+  --dark-color: #222831;
+  --border-color: #cccccc9e;
+  --hover-bg: #dddddda4;
+  --text-color: #000;
+  --error-color: #ff0000;
+  --success-color: green;
+}
+
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  min-height: 80vh;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--dark-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Utility Classes */
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* listing-navbar */
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-left: 1rem;
+}
+
+.navbar a:active {
+  color: var(--primary-color);
+}
+
+.navbar img {
+  height: 2.9rem;
+}
+
+#navUserLogo {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-image: url("/images/Profile\ Picture.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 0 2rem;
+  border-top: 1px solid var(--border-color);
+  position: sticky;
+  background: #fff;
+}
+
+footer .left-side {
+  font-size: 0.875rem;
+}
+
+footer .left-side a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin: 0 1rem;
+}
+
+footer .right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.right-side button {
+  background-color: transparent;
+  border: none;
+  padding: 0.3125rem 0.625rem;
+  font-size: 0.9375rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.right-side button:hover {
+  background-color: var(--hover-bg);
+  transform: scale(1.05);
+}
+
+.social-media {
+  width: 7.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.875rem;
+  width: 1.875rem;
+  color: var(--text-color);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.social-media a:hover {
+  background-color: var(--hover-bg);
+}
+
+/* Card Section */
+
+.card-container {
+  max-width: 100rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  overflow: hidden;
+  width: 18rem;
+  margin: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none !important;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.card:hover {
+  transform: translateY(-0.625rem);
+}
+
+.card img {
+  width: 100%;
+  height: auto; /* 👈 Let the image adjust height naturally */
+  aspect-ratio: 4/3; /* 👈 Keep good aspect ratio */
+  object-fit: cover; /* 👈 Crop the extra part, no stretching */
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  padding: 0.625rem 0;
+}
+
+.card-text h3 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card-text p {
+  margin-top: 0.3125rem;
+}
+
+/* Edit Listing Styles */
+.edit-listing-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.edit-listing-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+#editForm {
+  width: 100%;
+  max-width: 600px;
+}
+
+#editForm button {
+  grid-column: span 2;
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#editForm button:hover {
+  background-color: #e03152;
+}
+
+/* Show Listing */
+.show-container {
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  margin: 1.2rem auto;
+}
+
+.show-card {
+  max-width: 50rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.show-card p {
+  margin: 0.3125rem 0;
+}
+
+.img-card {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: red;
+}
+
+.img-card img {
+  width: 100%;
+  height: 22rem;
+  aspect-ratio: 6/3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: all ease 0.3s;
+}
+
+.img-card img:hover {
+  transform: scale(1.1);
+}
+
+.show-card .actionBtn {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.actionBtn .showBtn {
+  padding: 0.625rem 1.875rem;
+  background-color: var(--primary-color);
+  border-radius: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#deleteBtn {
+  border: none;
+  background-color: var(--dark-color);
+  color: #fff;
+  padding: 0.625rem 1.875rem;
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+
+#listingForm .createBtn {
+  grid-column: span 2;
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#listingForm .createBtn:hover {
+  background-color: var(--primary-color);
+}
+
+.review-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dark-color);
+  padding: 1rem;
+  margin: 10px;
+  text-overflow: ellipsis;
+}
+
+.review-comment {
+  margin-bottom: 0.8rem;
+}
+
+.review-generator {
+  width: 100%;
+}
+
+/* Search section styling */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem 0;
+  gap: 1rem;
+}
+
+.search-form input {
+  width: 40%;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 1px solid #00000047;
+  outline: none;
+}
+
+.search-form button {
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  color: white;
+  border: 1px solid #00000052;
+  border-radius: 2rem;
+}
+
+/*-----------------------------------*\
+  #Responsiveness code
+\*-----------------------------------*/
+
+/* Extra small devices (phones, 0–575px) */
+@media (max-width: 575.98px) {
+  .show-card {
+    width: 100%;
+  }
+
+  .img-card img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .show-container {
+    width: 100%;
+  }
+
+  .show-card .actionBtn {
+    width: 100%;
+  }
+
+  .show-card p {
+    margin: 0.5rem 0;
+  }
+
+  footer .left-side {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 0 0.5rem;
+  }
+
+  footer .left-side a {
+    display: none;
+  }
+
+  footer .right-side button {
+    display: none;
+  }
+
+  #alertMsg {
+    padding-right: 0rem;
+  }
+
+  #navUserLogo {
+    display: none;
+  }
+
+  .navUserText {
+    display: none !important;
+  }
+
+  .search-form input {
+    width: 70%;
+    padding: 0.5rem 0.8rem;
+    height: 2.8rem;
+  }
+}
+
+/* Small devices (phones, 576px–767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .show-card {
+    width: 85%;
+  }
+
+  .show-card .actionBtn {
+    width: 100%;
+  }
+
+  .show-card p {
+    margin: 0.5rem 0;
+  }
+
+  .img-card img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  footer .left-side {
+    font-size: 0.8rem;
+  }
+
+  footer .left-side a {
+    display: none;
+  }
+
+  footer .right-side button {
+    display: none;
+  }
+
+  #alertMsg {
+    padding-right: 0rem;
+  }
+
+  #navUserLogo {
+    display: none;
+  }
+
+  .navUserText {
+    display: none !important;
+  }
+
+  .search-form input {
+    width: 70%;
+    padding: 0.5rem 0.8rem;
+    height: 2.8rem;
+  }
+}
+
+/*-----------------------------------*\
+            #Map Styling
+\*-----------------------------------*/
+
+#map {
+  background-color: cadetblue;
+  height: 20rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
