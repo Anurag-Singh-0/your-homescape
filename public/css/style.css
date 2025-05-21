@@ -244,14 +244,14 @@ footer .right-side {
 
 /* Show Listing */
 .show-container {
-  width: 72%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   margin: 1.2rem auto;
 }
 
 .show-card {
-  max-width: 50rem;
+  max-width: 100%;
   width: 100%;
   font-size: 0.9rem;
 }
@@ -263,7 +263,6 @@ footer .right-side {
 .img-card {
   overflow: hidden;
   border-radius: 0.5rem;
-  background-color: red;
 }
 
 .img-card img {
@@ -329,6 +328,8 @@ footer .right-side {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .review-card {
@@ -338,7 +339,6 @@ footer .right-side {
   border-radius: 0.5rem;
   border: 1px solid var(--dark-color);
   padding: 1rem;
-  margin: 10px;
   text-overflow: ellipsis;
 }
 
@@ -380,19 +380,48 @@ footer .right-side {
   #Responsiveness code
 \*-----------------------------------*/
 
-/* Extra small devices (phones, 0–575px) */
+/* Extra Small (XS) - Phones (up to 575.98px) */
 @media (max-width: 575.98px) {
   .show-card {
     width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .show-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .review-generator h4 {
+    font-size: 1.3rem;
   }
 
   .img-card img {
     object-fit: cover;
     object-position: center;
+    height: 15rem;
   }
 
   .show-container {
+    width: 95%;
+  }
+
+  #login {
+    margin-left: 18%;
+  }
+
+  #signup {
+    margin-left: 18%;
+  }
+
+  .alert-danger {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+
+  .review-card {
     width: 100%;
+    margin: 0.5rem 0;
   }
 
   .show-card .actionBtn {
@@ -438,10 +467,48 @@ footer .right-side {
   }
 }
 
-/* Small devices (phones, 576px–767px) */
+/* Small (SM) - Large phones and small tablets (576px - 767.98px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .show-card {
-    width: 85%;
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .show-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .review-generator h4 {
+    font-size: 1.3rem;
+  }
+
+  .img-card img {
+    object-fit: cover;
+    object-position: center;
+    height: 15rem;
+  }
+
+  .show-container {
+    width: 95%;
+  }
+
+  #login {
+    margin-left: 18%;
+  }
+
+  #signup {
+    margin-left: 18%;
+  }
+
+  .alert-danger {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+
+  .review-card {
+    width: 100%;
+    margin: 0.5rem 0;
   }
 
   .show-card .actionBtn {
@@ -452,13 +519,12 @@ footer .right-side {
     margin: 0.5rem 0;
   }
 
-  .img-card img {
-    object-fit: cover;
-    object-position: center;
-  }
-
   footer .left-side {
     font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 0 0.5rem;
   }
 
   footer .left-side a {
@@ -488,12 +554,194 @@ footer .right-side {
   }
 }
 
+/* Medium (MD) - Tablets (768px - 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .show-card {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .show-card h3 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .review-generator h4 {
+    font-size: 1.3rem;
+  }
+
+  .img-card img {
+    object-fit: cover;
+    object-position: center;
+    height: 15rem;
+  }
+
+  .show-container {
+    width: 95%;
+  }
+
+  #login {
+    margin-left: 18%;
+  }
+
+  #signup {
+    margin-left: 18%;
+  }
+
+  .alert-danger {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+
+  .review-card {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .show-card .actionBtn {
+    width: 100%;
+  }
+
+  .show-card p {
+    margin: 0.5rem 0;
+  }
+
+  footer .left-side {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 0 0.5rem;
+  }
+
+  footer .left-side a {
+    display: none;
+  }
+
+  footer .right-side button {
+    display: none;
+  }
+
+  #alertMsg {
+    padding-right: 0rem;
+  }
+
+  #navUserLogo {
+    display: none;
+  }
+
+  .navUserText {
+    display: none !important;
+  }
+
+  .search-form input {
+    width: 70%;
+    padding: 0.5rem 0.8rem;
+    height: 2.8rem;
+  }
+}
+
+/* Large (LG) - Small laptops and desktops (992px - 1199.98px) */
+/* @media (min-width: 992px) and (max-width: 1199.98px) {
+  .show-card {
+    width: auto !important;
+    margin-bottom: 0.8rem;
+  }
+
+  .show-container {
+    background-color: royalblue;
+  }
+
+  .review-generator h4 {
+    font-size: 1.3rem;
+  }
+
+  .img-card img {
+    object-fit: cover;
+    object-position: center;
+    height: 15rem;
+  }
+
+  .show-container {
+    width: 95%;
+  }
+
+  #login {
+    margin-left: 18%;
+  }
+
+  #signup {
+    margin-left: 18%;
+  }
+
+  .alert-danger {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+
+  .review-card {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .show-card .actionBtn {
+    width: 100%;
+  }
+
+  .show-card p {
+    margin: 0.5rem 0;
+  }
+
+  footer .left-side {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 0 0.5rem;
+  }
+
+  footer .left-side a {
+    display: none;
+  }
+
+  footer .right-side button {
+    display: none;
+  }
+
+  #alertMsg {
+    padding-right: 0rem;
+  }
+
+  #navUserLogo {
+    display: none;
+  }
+
+  .navUserText {
+    display: none !important;
+  }
+
+  .search-form input {
+    width: 70%;
+    padding: 0.5rem 0.8rem;
+    height: 2.8rem;
+  }
+} */
+
+/* Extra Large (XL) - Large desktops (1200px - 1399.98px) */
+/* @media (min-width: 1200px) and (max-width: 1399.98px) {
+
+} */
+
+/* 2X Extra Large (XXL) - Very large screens (1400px and up) */
+/* @media (min-width: 1400px) {
+
+} */
+
 /*-----------------------------------*\
             #Map Styling
 \*-----------------------------------*/
 
 #map {
-  background-color: cadetblue;
   height: 20rem;
   width: 100%;
   border-radius: 0.5rem;
