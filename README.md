@@ -63,7 +63,10 @@
 ### 📱 Responsive Homepage
 
 ![Mobile View](./public/images/iPhone-14-Pro-home.png)
+<img src="./public/images/iPhone-14-Pro-home.png" alt="Homepage" width="500"/>
+
 
 ![Laptop View](./public/images/Macbook-Pro-home.png)
 
 ![Tablet View](./public/images/iPad-home.png)
+<img src="./public/images/iPad-home.png" alt="Homepage" width="500"/>
