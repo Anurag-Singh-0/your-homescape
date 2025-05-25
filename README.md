@@ -49,7 +49,7 @@
 ## 🖼️ Screenshots
 
 ### 📱 HomeScape Features
-![Homepage Screenshot](./images/Macbook-Pro-home.png)
+![Homepage Screenshot](./public/images/Macbook-Pro-home.png)
 
 ![Sign-up page Screenshot](./images/Macbook-Air-signup-front.png)
 
