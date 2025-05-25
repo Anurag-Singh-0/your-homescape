@@ -45,31 +45,6 @@
 
 ---
 
-## 📁 Project Structure (MVC)
-
-HomeScape/
-├── controllers/
-├── init/
-├── models/
-│ └── user.js
-├── routes/
-│ ├── listing.js
-│ ├── review.js
-│ └── user.js
-├── utils/
-│ └── ExpressError.js
-├── views/
-│ ├── includes/
-│ ├── layouts/
-│ └── listings/
-│ └── login-signup/
-├── public/
-│ └── (css, js, images)
-├── .env
-├── app.js
-├── cloudConfig.js
-├── middleware.js
-
 
 ## 🖼️ Screenshots
 
