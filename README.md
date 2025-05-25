@@ -50,23 +50,13 @@
 
 ### 📱 HomeScape Features
 ![Homepage Screenshot](./public/images/Macbook-Pro-home.png)
-
 ![Sign-up page Screenshot](./public/images/Macbook-Air-signup-front.png)
-
 ![Login Screenshot](./public/images/Macbook-Pro-login.png)
-
 ![Show Screenshot](./public/images/Macbook-Air-show-listing-front.png)
-
 ![Map & Review Screenshot](./public/images/Macbook-Air-map-front.png)
-
 
 ### 📱 Responsive Homepage
 
-![Mobile View](./public/images/iPhone-14-Pro-home.png)
-<img src="./public/images/iPhone-14-Pro-home.png" alt="Homepage" width="500"/>
-
-
+<img src="./public/images/iPhone-14-Pro-home.png" alt="Homepage" width="350"/>
 ![Laptop View](./public/images/Macbook-Pro-home.png)
-
-![Tablet View](./public/images/iPad-home.png)
-<img src="./public/images/iPad-home.png" alt="Homepage" width="500"/>
+<img src="./public/images/iPad-home.png" alt="Homepage" width="400"/>
