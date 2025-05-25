@@ -58,5 +58,4 @@
 ### 📱 Responsive Homepage
 
 <img src="./public/images/iPhone-14-Pro-home.png" alt="Homepage" width="350"/>
-![Laptop View](./public/images/Macbook-Pro-home.png)
 <img src="./public/images/iPad-home.png" alt="Homepage" width="400"/>
